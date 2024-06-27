@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MatrixCharlie : MonoBehaviour
+public class MatrixRotationToCanvas : MonoBehaviour
 {
     public Transform targetObject;
 
     public Text rotationMatrixText;
+
+    [SerializeField] private string matrixTitle = "";
 
     // Update is called once per frame
     void Update()
@@ -19,7 +21,7 @@ public class MatrixCharlie : MonoBehaviour
         Vector3 column3 = rotation * Vector3.forward;
 
         string formattedMatrix =
-            "Z-axis Rotation:\n" +
+            matrixTitle + "\n" +
             " [ " + column1.x.ToString("F1") + "  " + column2.x.ToString("F1") + "  " + column3.x.ToString("F1") + " ]\n" +
             " [ " + column1.y.ToString("F1") + "  " + column2.y.ToString("F1") + "  " + column3.y.ToString("F1") + " ]\n" +
             " [ " + column1.z.ToString("F1") + "  " + column2.z.ToString("F1") + "  " + column3.z.ToString("F1") + " ]";

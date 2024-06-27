@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.172768, g: 0.21589167, b: 0.29782546, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -877,6 +876,7 @@ GameObject:
   m_Component:
   - component: {fileID: 47000833}
   - component: {fileID: 47000834}
+  - component: {fileID: 47000835}
   m_Layer: 0
   m_Name: MatrixManagerZ
   m_TagString: Untagged
@@ -918,6 +918,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetObject: {fileID: 1047763638}
   matrixDegreeZ: {fileID: 1984296472}
+--- !u!114 &47000835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 47000832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c14d5f09ca89a044b68a2ebff26b676, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetObject: {fileID: 0}
+  rotationMatrixText: {fileID: 0}
+  matrixTitle: 
 --- !u!1 &48169233
 GameObject:
   m_ObjectHideFlags: 0
@@ -5455,7 +5470,7 @@ MonoBehaviour:
   proximityType: 3
   executionOrder: 0
   constraintOnRotation: 5
-  useLocalSpaceForConstraint: 0
+  useLocalSpaceForConstraint: 1
 --- !u!114 &139547327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7128,6 +7143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetObject: {fileID: 139547324}
   rotationMatrixText: {fileID: 550306605}
+  matrixTitle: 'Y-axis Rotation:'
 --- !u!850595691 &183086029
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -30282,11 +30298,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 860209856}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae372a268f7cd8b49960e9e9d8d62368, type: 3}
+  m_Script: {fileID: 11500000, guid: 1c14d5f09ca89a044b68a2ebff26b676, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   targetObject: {fileID: 1778412259}
-  matrixDegreeX: {fileID: 741233672}
+  rotationMatrixText: {fileID: 741233672}
+  matrixTitle: 'X-axis Rotation:'
 --- !u!1 &860291219
 GameObject:
   m_ObjectHideFlags: 0
@@ -35613,7 +35630,7 @@ MonoBehaviour:
   proximityType: 3
   executionOrder: 0
   constraintOnRotation: 3
-  useLocalSpaceForConstraint: 0
+  useLocalSpaceForConstraint: 1
 --- !u!114 &1047763641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38317,11 +38334,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1141214567}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3fbb9fba90c11504d86ad4af34c026f8, type: 3}
+  m_Script: {fileID: 11500000, guid: 1c14d5f09ca89a044b68a2ebff26b676, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   targetObject: {fileID: 1778412259}
   rotationMatrixText: {fileID: 850083796}
+  matrixTitle: 'X-axis Rotation:'
 --- !u!1 &1142231473
 GameObject:
   m_ObjectHideFlags: 0
@@ -57882,11 +57900,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1667069561}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1648e413ac6465c458974bd5c4e41a6f, type: 3}
+  m_Script: {fileID: 11500000, guid: 1c14d5f09ca89a044b68a2ebff26b676, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   targetObject: {fileID: 1047763638}
   rotationMatrixText: {fileID: 1509937930}
+  matrixTitle: 'Z-axis Rotation:'
 --- !u!1 &1667195862
 GameObject:
   m_ObjectHideFlags: 0
@@ -61483,7 +61502,7 @@ MonoBehaviour:
   proximityType: 3
   executionOrder: 0
   constraintOnRotation: 6
-  useLocalSpaceForConstraint: 0
+  useLocalSpaceForConstraint: 1
 --- !u!114 &1778412262
 MonoBehaviour:
   m_ObjectHideFlags: 0

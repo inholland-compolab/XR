@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class DeltaPropertyReader : MonoBehaviour
 {
-    public float xRotation;
+    //private float xRotation;
     public float yRotation;
-    public float zRotation;
+    //private float zRotation;
 
     public GameObject button;
 
@@ -21,11 +21,11 @@ public class DeltaPropertyReader : MonoBehaviour
     {
         Vector3 currentRotation = transform.rotation.eulerAngles;
 
-        xRotation = currentRotation.x;
+        //xRotation = currentRotation.x;
         yRotation = currentRotation.y;
-        zRotation = currentRotation.z;
+        //zRotation = currentRotation.z;
 
-        if (yRotation >= 82 && yRotation <= 98)
+        if (yRotation <= 276 && yRotation >= 264)  // 360 - 90 degrees = 270
         {
             button.SetActive(true);
         }

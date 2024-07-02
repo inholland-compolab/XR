@@ -12,7 +12,7 @@ public class RotationMatrixDisplay : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Quaternion rotation = targetObject.rotation;
+        Quaternion rotation = targetObject.localRotation;
 
         Vector3 column1 = rotation * Vector3.right;
         Vector3 column2 = rotation * Vector3.up;

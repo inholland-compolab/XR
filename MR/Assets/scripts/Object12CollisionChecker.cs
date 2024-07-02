@@ -4,7 +4,7 @@ public class CollisionHandler : MonoBehaviour
 {
 
     public GameObject TrackedObject;
-    public GameObject DesiredPoint;
+    //public GameObject DesiredPoint;
     public Vector3 DesiredGridLocation = Vector3.zero;
     public GameObject TextToAppear;
 

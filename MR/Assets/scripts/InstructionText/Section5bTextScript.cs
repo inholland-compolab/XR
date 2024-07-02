@@ -19,9 +19,11 @@ public class Section5bTextScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        helpText.SetActive(false);
-        unHelpButton.SetActive(false);
-        helpMatrix.SetActive(false);
+        //helpText.SetActive(false);
+        //unHelpButton.SetActive(false);
+        //helpMatrix.SetActive(false);
+        helpButton.SetActive(false);
+
         switchButton.SetActive(false);
         cubeDegreeMatrices.SetActive(false);
     }

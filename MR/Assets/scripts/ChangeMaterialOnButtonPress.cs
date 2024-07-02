@@ -62,4 +62,20 @@ public class MultiMaterialColorChangeScript : MonoBehaviour
             renderer.materials = materials;
         }
     }
+
+    public void SetSwitchMaterial()
+    {
+        foreach (Renderer renderer in myRenderers)
+        {
+            renderer.sharedMaterial = switchMaterial;
+        }
+    }
+
+    public void SetStartMaterial()
+    {
+        foreach (Renderer renderer in myRenderers)
+        {
+            renderer.sharedMaterial = startMaterial;
+        }
+    }
 }

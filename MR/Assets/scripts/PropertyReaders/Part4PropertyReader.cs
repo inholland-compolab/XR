@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Part4PropertyReader : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class Part4PropertyReader : MonoBehaviour
     public float zRotation;
 
     public GameObject button;
+    public UnityEvent onCorrect = new UnityEvent();
+    public UnityEvent onIncorrect = new UnityEvent();
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +22,7 @@ public class Part4PropertyReader : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 currentRotation = transform.rotation.eulerAngles;
+        Vector3 currentRotation = transform.localRotation.eulerAngles;
 
         xRotation = currentRotation.x;
         yRotation = currentRotation.y;
@@ -30,6 +33,7 @@ public class Part4PropertyReader : MonoBehaviour
         {
             Debug.Log("Correct rotation");
             button.SetActive(true);
+            onCorrect.Invoke();
         }
 
         else if ((xRotation >= 345f && xRotation <= 355f) &&
@@ -37,11 +41,13 @@ public class Part4PropertyReader : MonoBehaviour
         {
             Debug.Log("Secondary Correct rotation");
             button.SetActive(true);
+            onCorrect.Invoke();
         }
 
         else
         {
             button.SetActive(false);
+            onIncorrect.Invoke();
         }
     }
 }

@@ -19,7 +19,7 @@ public class DeltaPropertyReader : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 currentRotation = transform.rotation.eulerAngles;
+        Vector3 currentRotation = transform.localRotation.eulerAngles;
 
         //xRotation = currentRotation.x;
         yRotation = currentRotation.y;

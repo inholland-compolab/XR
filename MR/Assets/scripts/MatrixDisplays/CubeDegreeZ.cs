@@ -11,7 +11,7 @@ public class CubeDegreeZ : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Quaternion rotation = targetObject.rotation;
+        Quaternion rotation = targetObject.localRotation;
 
         Vector3 eulerRotation = QuaternionToEulerAngles(rotation);
 

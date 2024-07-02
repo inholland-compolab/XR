@@ -17,7 +17,7 @@ public class RotationRomeo : MonoBehaviour
         Vector3 column3 = rotation * Vector3.forward;
 
         string formattedMatrix =
-            "Identity matrix:\n" +
+            "Current matrix:\n" +
             " [ 1,0    0,0    0,0 ]\n" +
             " [ 0,0    " + column2.y.ToString("F1") + "    " + column3.y.ToString("F1") + " ]\n" +
             " [ 0,0    " + column2.z.ToString("F1") + "    " + column3.z.ToString("F1") + " ]";

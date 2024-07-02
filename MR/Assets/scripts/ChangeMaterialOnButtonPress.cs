@@ -11,13 +11,13 @@ public class MultiMaterialColorChangeScript : MonoBehaviour
 
     private bool colorChanged = false; // Added flag to track if color change has occurred
 
-    void Start()
+    void OnEnable()
     {
         // Get the renderers only from this object (not children)
         myRenderers = GetComponents<Renderer>();
 
         // Set the initial materials
-        SetMaterials();
+        ResetMaterials();
     }
 
     public void TriggerMaterialChange()
@@ -28,14 +28,17 @@ public class MultiMaterialColorChangeScript : MonoBehaviour
             return;
         }
 
-        // Toggle between startMaterial and switchMaterial
-        isSwitched = !isSwitched;
+        // Set the flag to true to indicate color change has occurred
+        colorChanged = true;
 
         // Apply the materials
         SetMaterials();
+    }
 
-        // Set the flag to true to indicate color change has occurred
-        colorChanged = true;
+    public void ResetMaterials()
+    {
+        colorChanged = false;
+        SetMaterials();
     }
 
     private void SetMaterials()
@@ -46,7 +49,7 @@ public class MultiMaterialColorChangeScript : MonoBehaviour
 
             for (int i = 0; i < materials.Length; i++)
             {
-                if (isSwitched)
+                if (colorChanged)
                 {
                     materials[i] = switchMaterial;
                 }

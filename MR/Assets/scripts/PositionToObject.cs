@@ -18,7 +18,7 @@ public class PositionToObject : MonoBehaviour
     void Update()
     {
         transform.position = trackedTransform.position;
-        transform.rotation = trackedTransform.rotation;
+        //transform.rotation = trackedTransform.rotation;
     }
 
     public void ResetTransform() { 

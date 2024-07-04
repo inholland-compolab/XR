@@ -69,6 +69,7 @@ public class MultiMaterialColorChangeScript : MonoBehaviour
         {
             renderer.sharedMaterial = switchMaterial;
         }
+        colorChanged = false;
     }
 
     public void SetStartMaterial()
@@ -77,5 +78,18 @@ public class MultiMaterialColorChangeScript : MonoBehaviour
         {
             renderer.sharedMaterial = startMaterial;
         }
+    }
+
+    public void ForceSwitchMaterial()
+    {
+        foreach (Renderer renderer in myRenderers)
+            if (renderer.sharedMaterial == startMaterial)
+            {
+                renderer.sharedMaterial = switchMaterial;
+                colorChanged = true;
+            } else {
+                renderer.sharedMaterial = startMaterial;
+                colorChanged = false;
+            }
     }
 }

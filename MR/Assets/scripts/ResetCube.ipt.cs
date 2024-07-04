@@ -5,6 +5,7 @@ using UnityEngine;
 public class ResetCube : MonoBehaviour
 {
     [SerializeField] private bool resetOnEnable = false;
+    [SerializeField] private Transform optionalResetLocation;
     private void OnEnable()
     {
         if (resetOnEnable) 
@@ -13,5 +14,7 @@ public class ResetCube : MonoBehaviour
     public void ResetObject()
     {
         transform.localRotation = Quaternion.identity;
+        if (optionalResetLocation != null)
+            transform.position = optionalResetLocation.position;
     }
 }

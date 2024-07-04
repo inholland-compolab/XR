@@ -5,13 +5,13 @@ using UnityEngine.Events;
 
 public class Part4PropertyReader : MonoBehaviour
 {
-    public float xRotation;
-    public float yRotation;
-    public float zRotation;
-
     public GameObject button;
     public UnityEvent onCorrect = new UnityEvent();
     public UnityEvent onIncorrect = new UnityEvent();
+
+    private float xRotation;
+    private float yRotation;
+    private float zRotation;
 
     // Start is called before the first frame update
     void Start()
